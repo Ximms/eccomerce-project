@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Detail Produk</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 shadow-2xl">
+  
+  <!-- Navbar -->
+  <nav class="px-4 md:px-10 py-4 flex flex-wrap md:flex-nowrap items-center justify-between sticky top-0 z-50" style="background-color: #91AC8F;">
+
+    <!-- Kiri: Logo -->
+    <div class="flex items-center space-x-2 mb-4 md:mb-0">
+      <img src="aset Landing/bran nav.png" alt="VoltShop Logo" class="h-12 md:h-14" />
+    </div>
+    
+    <!-- Tengah: Search dan Cart -->
+    <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-5 flex-1 mb-4 md:mb-0">
+      <!-- Search -->
+      <input type="text" placeholder="Search..." class="w-full md:w-[400px] lg:w-[600px] px-4 py-2 text-base md:text-xl bg-white rounded-xl border border-black outline-none" />
+      
+      <!-- Cart -->
+      <a href="cart.html">
+        <img src="aset Landing/cart.png" alt="Cart" class="h-8 md:h-10 w-8 md:w-10 cursor-pointer" />
+      </a>
+    </div>
+
+    <!-- Kanan: Settings & Profile -->
+    <div class="flex items-center gap-4">
+      <img src="aset Landing/setings.png" alt="Settings" class="w-8 md:w-[50px]" />
+      <a href="profile.html">
+        <img src="aset Landing/Group 11.png" alt="Profile" class="w-8 md:w-[47px]" />
+      </a>
+    </div>
+
+  </nav>
+
+  <!-- Konten Detail Produk -->
+  <div class="flex justify-center px-4 py-10">
+    <div id="product-detail" class="bg-white rounded-lg p-4 md:p-6 w-full max-w-[1400px] min-h-[300px] md:h-[550px] flex flex-col md:flex-row gap-6 md:gap-8">
+      <!-- Konten produk akan dimuat lewat JavaScript -->
+    </div>
+  </div>
+
+  <script src="/src/Detail.js" defer></script>
+</body>
+</html>

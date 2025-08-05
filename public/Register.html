@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoltShop Register</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen flex">
+  <!-- Kiri -->
+  <div class="w-1/2 flex flex-col justify-center items-center relative" style="background-color: #91AC8F;">
+    <div class="flex items-center mb-4">
+      <img src="aset loginRegis/image 40 (1).png" alt="Lightning Icon" class="w-[500px] mr-2" />
+    </div>
+  </div>
+
+  <!-- Kanan -->
+  <div class="w-1/2 bg-white flex flex-col justify-center items-center">
+    <div class="bg-white p-10 rounded-lg">
+      <!-- Tambahkan action dan method jika ingin submit ke halaman atau endpoint tertentu -->
+      <form class="space-y-4" action="Home.html" method="GET">
+        <!-- Phone/Email -->
+        <div>
+          <label for="identifier" class="block text-xl text-gray-700 font-medium mb-1">Phone Number/Email</label>
+          <input
+            id="identifier"
+            name="identifier"
+            type="text"
+            placeholder="Phone Number/Email"
+            required
+            class="w-[500px] border-b border-gray-400 focus:outline-none py-1"
+          />
+        </div>
+        <!-- Create Password -->
+        <div>
+          <label for="password" class="block text-xl text-gray-700 font-medium mb-1">Create a Password</label>
+          <input
+            id="password"
+            name="password"
+            type="password"
+            placeholder="Create a Password"
+            required
+            class="w-[500px] border-b border-gray-400 focus:outline-none py-1"
+          />
+        </div>
+        <!-- Re-enter Password -->
+        <div>
+          <label for="confirm-password" class="block text-xl text-gray-700 font-medium mb-1">Re-enter The Password</label>
+          <input
+            id="confirm-password"
+            name="confirm_password"
+            type="password"
+            placeholder="Re-enter The Password"
+            required
+            class="w-[500px] border-b border-gray-400 focus:outline-none py-1"
+          />
+        </div>
+
+        <!-- Tombol Register sebagai button submit -->
+        <button
+          type="submit"
+          class="block w-full text-xl text-white font-semibold py-4 rounded-md text-center"
+          style="background-color: #91AC8F;"
+        >
+          Register
+        </button>
+
+        <!-- Link ke login jika sudah punya akun -->
+        <div class="text-lg text-center text-gray-600">
+          already have an account?
+          <a href="Login.html" class="text-blue-600 font-medium">Login</a>
+        </div>
+
+        <div class="flex items-center justify-center gap-2">
+          <div class="w-1/2 border-t border-t-gray-400"></div>
+          <span class="text-gray-500 text-sm">Or</span>
+          <div class="w-1/2 border-t border-t-gray-400"></div>
+        </div>
+
+        <!-- Google/Facebook -->
+        <div class="flex gap-4 justify-center">
+          <button type="button" class="flex items-center border border-black px-20 py-3 rounded-md shadow-sm hover:bg-gray-100">
+            <img src="aset loginRegis/logos_facebook.png" alt="Facebook" class="w-7 mr-2" /> Facebook
+          </button>
+          <button type="button" class="flex items-center border border-black px-20 py-3 rounded-md shadow-sm hover:bg-gray-100">
+            <img src="aset loginRegis/devicon_google.png" alt="Google" class="w-7 mr-2" /> Google
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

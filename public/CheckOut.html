@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CheckOut</title>
+  <script src="https://cdn.tailwindcss.com?plugins=line-clamp"></script>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="px-10 py-4 flex items-center justify-between sticky top-0 z-50" style="background-color: #91AC8F;">
+    <div class="flex items-center space-x-2">
+      <img src="aset Landing/bran nav.png" alt="VoltShop Logo" class="h-14 w-58" />
+    </div>
+    <div class="flex justify-center items-center gap-5">
+      <input type="text" placeholder="Search..." class="w-[700px] text-xl px-6 py-4 bg-white rounded-xl border border-black outline-none"/>
+      <a href="Cart.html">
+        <img src="aset Landing/cart.png" alt="Cart" class="h-10 w-10"/>
+      </a>
+    </div>
+    <div class="flex items-center gap-5 ml-5">
+      <img src="aset Landing/setings.png" alt="Settings" class="w-[50px]" />
+      <img src="aset Landing/profile.png" alt="Profile" class="w-[47px]" />
+    </div>
+  </nav>
+
+  <!-- Alamat Pengiriman -->
+  <div class="px-10 py-7">
+    <div class="bg-[#D9D9D9] p-4 px-10 rounded-xl border border-black w-[1300px] mx-auto">
+      <h2 class="font-bold text-lg mb-2">Alamat Pengiriman</h2>
+      <div class="flex items-start gap-3">
+        <img src="aset Landing/basil_location-solid.png" alt="Location Icon" class="w-12 h-12 mt-1">
+        <div>
+          <p class="text-lg font-bold">Raihan Ganteng</p>
+          <p class="font-semibold text-gray-700">Raihan Ganteng | 081122334455</p>
+          <p class="text-gray-600">Jl. RehanGanteng, Kec. Tapops, Kota Depok, Jawa Tenggara, Indonesia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Daftar Produk Checkout -->
+  <div class="px-10 mt-[-20px]">
+    <div class="bg-[#D9D9D9] w-[1300px] mx-auto p-4 px-10 rounded-xl border border-black">
+      <div id="checkout-container"></div>
+    </div>
+  </div>
+
+  <!-- Shipping & Payment Method -->
+  <div class="px-10 py-2 justify-center w-full max-w-[1380px] mx-auto">
+    <!-- Shipping -->
+    <div class="bg-[#D9D9D9] p-6 px-10 rounded-xl border border-black flex-1">
+      <h2 class="font-bold text-lg mb-4">Shipping Method</h2>
+      <div class="space-y-3">
+        <select id="shipping-method" name="shipping-method" required class="mt-1 block w-full h-16 border rounded-lg p-2 px-5 text-lg focus:ring-black focus:border-black">
+          <option value="">Pilih Kurir</option>
+          <option value="JNE">JNE</option>
+          <option value="J&T">J&T</option>
+          <option value="SiCepat">SiCepat</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Payment -->
+    <div class="bg-[#D9D9D9] mt-2 p-6 px-10 rounded-xl border border-black flex-1">
+      <h2 class="font-bold text-lg mb-4">Payment Method</h2>
+      <div class="space-y-3">
+        <select id="payment-method" name="payment-method" required class="mt-1 block w-full h-16 border rounded-lg p-2 px-5 text-lg focus:ring-black focus:border-black">
+          <option value="">Pilih Metode Pembayaran</option>
+          <option value="COD">Cash On Delivery (COD)</option>
+          <option value="E-Wallet">E-Wallet</option>
+          <option value="Transfer">Transfer Bank</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ringkasan Pembayaran -->
+  <div class="px-10 max-w-[1380px] mx-auto pb-10 flex gap-2">
+    <!-- Detail -->
+    <div class="flex-1 bg-[#D9D9D9] border border-black rounded-xl p-6 px-10">
+      <h2 class="font-bold text-xl mb-4">Payment Details</h2>
+      <div class="space-y-2">
+        <div class="flex justify-between bg-white px-4 py-2 rounded">
+          <span>Total Produk (<span id="total-items">0</span> produk)</span>
+          <span id="total-harga">Rp 0</span>
+        </div>
+        <div class="flex justify-between px-4 py-2">
+          <span>Ongkos Kirim</span>
+          <span>Rp 10.000</span>
+        </div>
+        <div class="flex justify-between bg-white px-4 py-2 rounded">
+          <span>Biaya Asuransi</span>
+          <span>Rp 1.000</span>
+        </div>
+        <div class="flex justify-between px-4 py-2">
+          <span>Biaya Layanan</span>
+          <span>Rp 2.000</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Total -->
+    <div class="w-[644px] bg-[#91AC8F] border border-black rounded-xl p-6 text-center flex flex-col justify-between">
+      <div class="px-10">
+        <h2 class="text-white font-bold text-xl mb-3">Total Bayar</h2>
+        <p id="grand-total" class="text-red-600 text-3xl font-bold">Rp 0</p>
+      </div>
+      <button id="bayar-btn" class="mt-6 w-full py-3 bg-[#FDFBFB] text-[#6B8E6E] font-bold text-lg rounded border border-black">
+        Bayar
+      </button>
+    </div>
+  </div>
+
+  <!-- JS Checkout -->
+  <script src="/src/CheckOut.js"></script>
+</body>
+</html>
